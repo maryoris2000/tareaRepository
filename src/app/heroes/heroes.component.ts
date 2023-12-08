@@ -20,12 +20,17 @@ import { FormsModule } from '@angular/forms';
 
 })
 export class HeroesComponent {
+[x: string]: any;
   heroes = HEROES;
+
+  selectedHero?: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   /*
   hero = 'Windstorm';
   */
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  
+  }
+
 }
